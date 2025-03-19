@@ -110,4 +110,4 @@ The dataset contains historical NBA lineup data, including allowed features such
 - Displays the model’s final accuracy and loss metrics.
 - Insights into how well the model performs and potential improvements.
 - Initial validation: 79% accuracy
-- Final validation using test set: 0.003% accuracy
+- Final validation using the provided test set: 0.003% accuracy
