@@ -67,16 +67,13 @@ The dataset contains historical NBA lineup data, including allowed features such
 - Ensures compliance with dataset restrictions while maximizing predictive power.
 
 ### 3. Feature selection
-- Identify the most relevant features for predicting the optimal fifth player in a lineup.
-- This step removes redundant or low-impact features to improve model efficiency.
+- Identify the allowed features for predicting the optimal fifth player in a lineup.
 
 ### 4. Load and merge NBA Matchup Data
-- Load historical NBA matchups (2007-2015) and integrate them with player statistics.
-- Ensures a comprehensive dataset for training the model.
+- Load and merge data of historical NBA matchups (2007-2015) and filter the allowed features.
 
 ### 5. Handle Missing Values
-- Identify and fill or remove missing values to prevent model biases.
-- Techniques include imputation and dropping irrelevant records.
+- Identify and remove missing values to prevent model biases.
 
 ### 6. Label Encode Columns
 - Convert categorical data (e.g., team names, player names) into numerical format.
@@ -91,19 +88,14 @@ The dataset contains historical NBA lineup data, including allowed features such
 - Helps evaluate the model's ability to generalize to unseen data.
 
 ### 9. Move rows where outcome == -1 from test to train
-- Some rows were mistakenly placed in the test set with a -1 outcome (indicating an unknown player).
-- These rows are moved back to the training set to ensure proper learning.
+- Some rows were placed in the test set with a -1 outcome (indicating an unknown player).
+- These rows are moved back to the training set to ensure proper learning, and compliance with assignment instructions (test set can only contain outcome = 1)
 
 ### 10. Handling Missing Classes in Training Set
-- If a player appears in the test set but not in the training set, synthetic training data is created.
 - This prevents the model from failing on completely unseen labels.
 
 ### 11. Train XGBoost Model
 - XGBoost (Extreme Gradient Boosting) is trained using optimized hyperparameters.
-- Learning Rate: Controls step size for weight updates.
-- Max Depth: Prevents overfitting by limiting tree complexity.
-- Subsampling: Uses a fraction of data to improve generalization.
-- Regularization: Prevents model from over-relying on a small number of features.
 - The model is trained using a multi-class classification objective (multi:softprob).
 
 ### 12. Model Testing Predictions
@@ -114,7 +106,7 @@ The dataset contains historical NBA lineup data, including allowed features such
 - Evaluate model accuracy using multiclass log loss (mlogloss) and classification accuracy.
 - Analyzes performance across training and validation datasets.
 
-### 14. Results
+### 14. Final Results
 - Displays the model’s final accuracy and loss metrics.
 - Insights into how well the model performs and potential improvements.
 - Initial validation: 79% accuracy
