@@ -1,11 +1,13 @@
 # Machine Learning: NBA Lineup Prediction Model
 
-SOFE 4620U - Machine Learning and Data Mining
+## SOFE 4620U - Machine Learning and Data Mining
 
-** Group 20: **
+## Group 20:
 
 Inder Singh - 100816726
+
 Justin Fisher - 100776303
+
 Rohan Radadiya - 100704614
 
 ## Overview
@@ -115,6 +117,5 @@ The dataset contains historical NBA lineup data, including allowed features such
 ### 14. Results
 - Displays the model’s final accuracy and loss metrics.
 - Insights into how well the model performs and potential improvements.
-
-  15. Model Evaluation
-  16. Results
+- Initial validation: 79% accuracy
+- Final validation using test set: 0.003% accuracy
