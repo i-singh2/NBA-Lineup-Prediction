@@ -10,7 +10,7 @@ Rohan Radadiya - 100704614
 
 ## Overview
 
-This NBA Lineup Prediction project is meant to predict the fifth home player, ` home_4 ` in NBA matchups with the use of historical data from 2007 to 2015.
+This NBA Lineup Prediction project is meant to predict the fifth home player, ` home_4 ` in NBA matchups using historical data from 2007 to 2015.
 Built using XGBoost, the model is trained on NBA data from 2007-2015 to analyze lineup effectiveness and assist in strategic decision-making.
 
 ## Key Features
@@ -24,7 +24,7 @@ Built using XGBoost, the model is trained on NBA data from 2007-2015 to analyze 
 
 ## Dataset
 
-The dataset contains historical NBA lineup data, including:
+The dataset contains historical NBA lineup data, including allowed features such as:
 
 - `game` - Unique game identifier
 - `season` - NBA season year
@@ -33,12 +33,26 @@ The dataset contains historical NBA lineup data, including:
 - `starting_min` - Minutes played by the lineup
 - `home_0 to home_3` - First four players in the home team lineup
 - `away_0 to away_4` - First five players in the away team lineup
-- `target_player` - The missing fifth player to predict
+- `outcome` - Determines whether the game resulted in a win or loss for the home team (1 meaning win, -1 meaning loss)
 
-## Installing Dependencies
+## Setup and Running Instructions
+
+### Prerequisites
+- **Python** 3.8 or newer
+- **Jupyter Notebook** or **JupyterLab**
+
+### Installing Dependencies
 
 - `pip install pandas numpy xgboost scikit-learn`
-- `pip install openpyxl` 
+- `pip install openpyxl`
+
+### Running the Project
+1. Clone this repository or download the provided notebook and datasets.
+2. Ensure your directory structure matches the layout provided above.
+3. Open the notebook using Jupyter Notebook or JupyterLab:
+   ```bash
+   jupyter notebook nba_lineup_prediction.ipynb
+4. Execute notebook cells sequentially from top to bottom to reproduce results.
 
 ## Workflow
 
@@ -101,3 +115,6 @@ The dataset contains historical NBA lineup data, including:
 ### 14. Results
 - Displays the model’s final accuracy and loss metrics.
 - Insights into how well the model performs and potential improvements.
+
+  15. Model Evaluation
+  16. Results
