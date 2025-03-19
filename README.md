@@ -101,6 +101,3 @@ The dataset contains historical NBA lineup data, including:
 ### 14. Results
 - Displays the model’s final accuracy and loss metrics.
 - Insights into how well the model performs and potential improvements.
-
-  15. Model Evaluation
-  16. Results
